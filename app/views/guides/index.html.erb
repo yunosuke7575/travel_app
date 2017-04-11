@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <%# header %>
+<div class="container">
 <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header pull-left">Guide
@@ -9,64 +10,21 @@
         </div>
 <%# header end%>
 
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @guides.each do |guide| %>
-      <tr>
-      
-        <td><%= guide.title %></td>
-        <td><%= guide.content %></td>
-        <td><%= link_to 'Show', guide %></td>
-        <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
-        <td><%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </div>
-       </div>
-      </tr>
+<%# main %>
+<% @guides.each_slice(3) do |guides| %>
+	<div class="row">
+	<% guides.each do |guide| %>
+	<div class="col-md-4 portfolio-item">
+	<a href="#">
+       <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+     </a>
+		<h3> <%= link_to guide.title,guide %> </h3>
+    	<p>	 <%= guide.content %> </p>
+    </div>
     <% end %>
-  </tbody>
-
-</table>
-
-
-<br>
+   </div>
+<% end %>
+</div>
+<%# main end%>
 
 <%= link_to 'New Guide', new_guide_path %>
-
-<div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
