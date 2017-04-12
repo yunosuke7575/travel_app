@@ -15,9 +15,7 @@
 	<div class="row">
 	<% guides.each do |guide| %>
 	<div class="col-md-4 portfolio-item">
-	<a href="#">
-       <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-     </a>
+       <%= image_tag("mv_cover.png", class:"img-responsive") %>
 		<h3> <%= link_to guide.title,guide %> </h3>
     	<p>	 <%= guide.content %> </p>
     </div>
