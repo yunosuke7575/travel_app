@@ -1,14 +1,44 @@
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @guide.title %>
-</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @guide.content %>
-</p>
+<div class="container">
+<div class="row">
+		<%# Guide content %>
+            <div class="col-lg-9">
+                <h1 class="page-header pull-left">
+                <%= @guide.title %>
+                </h1>
+                <%= image_tag("mv_cover.png", class:"img-responsive") %>
+                <br>
+                <p><%= @guide.content %></p>
+                <br>
+                <div class="row">
+                <ul class="list-inline banner-social-buttons">
+                	<div class="col-lg-4 col-lg-offset-3">
+                    <li>
+                        <a href="https://twitter.com/?lang=ja" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    </div>
+                    <div class="col-lg-4">
+                    <li>
+                        <a href="https://www.facebook.com/yunosuke.katayama" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                    </div>
+                </ul>
+                </div>
+            </div>
 
-<%= link_to 'Edit', edit_guide_path(@guide) %> |
-<%= link_to 'Back', guides_path %>
+        <%# guide content end %>
+		
+		<%# user profile %>
+            <div class="col-lg-3 well">
+            <%= image_tag("yunosuke.png", class:"img-circle img-responsive center-block") %>
+            <h1>Profile</h1>
+            <h5>アメリカ在住。旅行大好き。温泉大好き。グランドキャニオンは３日４日で行きました。</h5>
+        </div>
+
+        <%# user profile end %>
+</div>
+
+
