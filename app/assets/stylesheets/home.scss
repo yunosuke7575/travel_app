@@ -1,3 +1,15 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron{
+	background:url(mv_cover.png) center;
+	background-size: cover;
+	height: 400px;
+}
+
+.vertical-center{
+  	display: flex;
+  	align-items: center;
+}
+

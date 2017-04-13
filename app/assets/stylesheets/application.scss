@@ -114,3 +114,18 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
+
+/* btn-ghost */
+
+.btn-ghost{
+  background: transparent;
+  }
+.btn-ghost.btn-white {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn-ghost.btn-white:hover {
+  color: #333;
+  background: #fff;
+  opacity: 0.5;
+}
