@@ -3,8 +3,14 @@
     <%= link_to "TravelBox", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", guides_path %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Guide", guides_path %></li>
+        <li><%= link_to current_user.email %></li>
+        <li><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "Guide", guides_path %></li>
         <li><%= link_to "Log in", new_user_session_path %></li>
+        <% end %>    	
       </ul>
     </nav>
   </div>

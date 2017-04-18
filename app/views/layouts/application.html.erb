@@ -13,9 +13,6 @@
 	<div class="container">
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <% if user_signed_in? %>
-    <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
-  <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
     </div>

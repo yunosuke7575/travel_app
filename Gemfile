@@ -55,3 +55,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass'
 # login function
 gem 'devise'
+# 画像アップロード機能　
+gem 'carrierwave'
+# 画像アップロード機能　
+gem 'rmagick'

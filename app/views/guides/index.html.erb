@@ -15,9 +15,10 @@
 	<div class="row">
 	<% guides.each do |guide| %>
 	<div class="col-md-4 portfolio-item">
-       <%= image_tag("mv_cover.png", class:"img-responsive") %>
-		<h3> <%= link_to guide.title,guide %> </h3>
+       <%= image_tag(guide.image_url, class:"img-responsive") %>
+		<h3> <%= link_to guide.title,guide,id:"guide_hover" %> </h3>
     	<p>	 <%= guide.content.truncate(60) %> </p>
+        <%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?'}, id:"guide_hover" %>
     </div>
     <% end %>
    </div>
@@ -25,4 +26,4 @@
 </div>
 <%# main end%>
 
-<%= link_to 'New Guide', new_guide_path %>
+<%= link_to 'New Guide', new_guide_path,id:"guide_hover" %>
