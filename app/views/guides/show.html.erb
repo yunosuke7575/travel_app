@@ -33,11 +33,11 @@
 		
 		<%# user profile %>
             <div class="col-lg-3 well">
-            <%= image_tag("yunosuke.png", class:"img-circle img-responsive center-block") %>
-            <h1>Profile</h1>
-            <h5>アメリカ在住。旅行大好き。温泉大好き。グランドキャニオンは３日４日で行きました。</h5>
+            <%= image_tag(@guide.user.image, class:"img-circle img-responsive center-block") %>
+            <h1><%= @guide.user.name %></h1>
+            <h5><%= @guide.user.email %></h5>
+           
         </div>
-
         <%# user profile end %>
 </div>
 

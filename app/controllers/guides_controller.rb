@@ -1,4 +1,5 @@
 class GuidesController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
   before_action :set_guide, only: [:show, :edit, :update, :destroy]
 
   # GET /guides
@@ -69,6 +70,6 @@ class GuidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_params
-      params.require(:guide).permit(:title, :content, :image)
+      params.require(:guide).permit(:title, :user_id, :content, :image)
     end
 end
