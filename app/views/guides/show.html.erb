@@ -34,7 +34,7 @@
 		<%# user profile %>
             <div class="col-lg-3 well">
             <%= image_tag(@guide.user.image, class:"img-circle img-responsive center-block") %>
-            <h1><%= @guide.user.name %></h1>
+            <h1><%= link_to @guide.user.name, '#', id:"guide_hover" %></h1>
             <h5><%= @guide.user.email %></h5>
            
         </div>
