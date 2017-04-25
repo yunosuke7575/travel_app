@@ -1,5 +1,5 @@
 class GuidesController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :show]
   before_action :set_guide, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
 
