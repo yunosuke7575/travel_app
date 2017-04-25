@@ -9,7 +9,7 @@
                 <h1 class="page-header pull-left">
                 <%= @guide.title %>
                 </h1>
-                <%= image_tag(@guide.image_url, class:"img-responsive")%>
+                <%= image_tag(@guide.image_url, class:"img-responsive") %>
                 <br>
                 <p><%= @guide.content %></p>
                 <br>
@@ -40,5 +40,8 @@
         </div>
         <%# user profile end %>
 </div>
+
+<%= link_to 'Edit', edit_guide_path(@guide),id:"guide_hover" %> 
+
 
 
