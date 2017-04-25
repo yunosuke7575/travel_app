@@ -40,8 +40,11 @@
         </div>
         <%# user profile end %>
 </div>
-
+<% if current_user.id == @guide.user.id %>
 <%= link_to 'Edit', edit_guide_path(@guide),id:"guide_hover" %> 
+<br>
+<%= link_to 'Destroy', guide_path, method: :delete, data: { confirm: 'Are you sure?'}, id:"guide_hover" %>
+<% end %>
 
 
 

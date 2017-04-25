@@ -18,7 +18,6 @@
        <%= image_tag(guide.image_url, class:"img-responsive") %>
 		<h3> <%= link_to guide.title,guide,id:"guide_hover" %> </h3>
     	<p>	 <%= guide.content.truncate(60) %> </p>
-        <%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?'}, id:"guide_hover" %>
     </div>
     <% end %>
    </div>

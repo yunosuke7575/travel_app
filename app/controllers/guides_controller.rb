@@ -1,6 +1,7 @@
 class GuidesController < ApplicationController
   before_action :authenticate_user!, only: [:new]
   before_action :set_guide, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update]
 
   # GET /guides
   # GET /guides.json
@@ -67,6 +68,15 @@ class GuidesController < ApplicationController
     def set_guide
       @guide = Guide.find(params[:id])
     end
+
+
+    def correct_user
+      guide = Guide.find(params[:id])
+      if current_user.id != guide.user.id
+        redirect_to root_path
+      end
+    end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_params
