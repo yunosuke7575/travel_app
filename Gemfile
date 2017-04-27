@@ -59,3 +59,7 @@ gem 'devise'
 gem 'carrierwave'
 # 画像アップロード機能　
 gem 'rmagick'
+# omniauth install
+gem 'omniauth'
+# facebook login
+gem 'omniauth-facebook'
