@@ -24,7 +24,7 @@ def self.from_omniauth(auth)
     user.password = Devise.friendly_token[0,20]
     user.name = auth.info.name   # assuming the user model has a name
     user.image = auth.info.image # assuming the user model has an image
-    user.link = auth.extra.raw_info.link
+    user.link = auth.info.urls # assuming the user model has a link 
   end
 end
   
