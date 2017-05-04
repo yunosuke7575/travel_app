@@ -63,3 +63,7 @@ gem 'rmagick'
 gem 'bootstrap-social-rails'
 # install font-awesome
 gem 'font-awesome-rails'
+# omniauth install
+gem 'omniauth'
+# facebook login
+gem 'omniauth-facebook'
