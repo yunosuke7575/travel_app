@@ -55,7 +55,7 @@
 <div class="container">
 	<% @guides.each_slice(3) do |guides| %>
 	<div class="row">
-	<% guides.each do |guide| %>
+	<% guides.first(6).each do |guide| %>
 	<div class="col-md-4 portfolio-item">
        <%= image_tag(guide.image_url, class:"img-responsive") %>
 		<h3> <%= link_to guide.title,guide,id:"guide_hover" %> </h3>
