@@ -59,6 +59,10 @@ gem 'devise'
 gem 'carrierwave'
 # 画像アップロード機能　
 gem 'rmagick'
+# bootstrap social icon
+gem 'bootstrap-social-rails'
+# install font-awesome
+gem 'font-awesome-rails'
 # omniauth install
 gem 'omniauth'
 # facebook login
