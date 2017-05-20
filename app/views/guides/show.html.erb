@@ -22,7 +22,9 @@
                     </div>
                     <div class="col-lg-4">
                     <li>
-                        <%= link_to raw('<i class="fa fa-facebook fa-fw"></i>話しを聞く'), @guide.user.get_link, class: "btn btn-default btn-lg " %>
+                        <% if @guide.user.link.presence %>
+                            <%= link_to raw('<i class="fa fa-facebook fa-fw"></i>話しを聞く'), @guide.user.get_link, class: "btn btn-default btn-lg " %>
+                        <% end %>
                     </li>
                     </div>
                 </ul>
@@ -49,7 +51,7 @@
 
 
 <% if @guide.user.link.presence %>
-<h1><%= link_to 'facebook', @guide.user.get_link %></h1>
+    <h1><%= link_to 'facebook', @guide.user.get_link %></h1>
 <% end %>
 
 
