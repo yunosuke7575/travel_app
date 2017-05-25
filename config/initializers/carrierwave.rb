@@ -6,6 +6,7 @@ CarrierWave.configure do |config|
     region: 'us-west-1'
   }
 
+  config.cache_dir = "#{Rails.root}/tmp/uploads"
   config.fog_directory  = 'travelapp-images'
   config.cache_storage = :fog
   
