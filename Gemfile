@@ -69,3 +69,5 @@ gem 'font-awesome-rails'
 gem 'omniauth'
 # facebook login
 gem 'omniauth-facebook'
+# s3に画像をアップロード
+gem 'fog'
