@@ -21,7 +21,7 @@
 	<% guides.each do |guide| %>
 	<div class="col-md-4 portfolio-item">
        <%= image_tag(guide.image_url, class:"img-responsive") %>
-		<h3> <%= link_to guide.title,guide,id:"guide_hover" %> </h3>
+		<h3> <%= link_to guide.title,guide,id:"guide_title_hover" %> </h3>
     	<p>	 <%= guide.content.truncate(60) %> </p>
     </div>
     <% end %>
