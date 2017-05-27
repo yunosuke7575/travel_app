@@ -7,3 +7,11 @@
   	background: #fff;
   	opacity: 0.8;
 }
+
+#guide_title_hover:hover{
+	color: #333;
+  	background: #fff;
+  	opacity: 3;
+  	text-decoration: none;
+  	position: relative; top: 1px; left: 1px;
+}
