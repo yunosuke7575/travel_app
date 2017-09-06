@@ -4,6 +4,8 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
+        <li><%= link_to 'New Guide', new_guide_path %></li> 
+        <li><%= link_to "Guide", guides_path %></li>
         <li><%= link_to "ガイド一覧", guides_path %></li>
         <li><%= link_to current_user.name,current_user %></li>
         <li><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
